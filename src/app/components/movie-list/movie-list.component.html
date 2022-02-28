@@ -1,6 +1,11 @@
-<p>movielists..</p>
-<div *ngFor="let m of movies">
-    <h1>{{ m.name }}</h1>
-    <h2>{{ m.description }}</h2>
-    <img [src]="m.imageUrl">
-</div>
+<body>
+    <article>
+        <h2>Movies</h2>
+
+        <div *ngFor="let m of movies">
+            <img [src]="m.imageUrl">
+            <h3>{{ m.name }}</h3>
+
+        </div>
+    </article>
+</body>
