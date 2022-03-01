@@ -20,6 +20,10 @@ a {
   padding-left: 250px;
   color: #fff;
   font-size: 1.5rem;
+
+  &.active {
+    color: #a76a0e;
+  }
 }
 
 h1 {
