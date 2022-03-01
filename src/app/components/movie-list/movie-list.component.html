@@ -2,7 +2,7 @@
     <article>
         <h2>Movies</h2>
         <div *ngFor="let m of movies">
-            <a routerLink="/movies/{{m.id}}">
+            <a routerLink="/movie/{{m.id}}">
                 <img [src]="m.imageUrl">
                 <h3>{{ m.name }}</h3>
             </a>

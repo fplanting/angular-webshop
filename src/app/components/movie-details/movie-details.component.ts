@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { IMovie } from 'src/app/models/IMovie';
+import { MovieService } from 'src/app/services/movie.service';
 
 @Component({
   selector: 'app-movie-details',
@@ -8,13 +10,17 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MovieDetailsComponent implements OnInit {
 
-  movieId: number = 0;
+  movie: IMovie | undefined;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private service: MovieService) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe((p) => {
-      this.movieId = +p['id'];
+    this.route.paramMap.subscribe(p => {
+      const id = p.get('id');
+
+      this.service.getMovieId(id).subscribe(data => {
+        this.movie = data;
+      })
     })
   }
 

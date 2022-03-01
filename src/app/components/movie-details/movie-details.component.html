@@ -1,1 +1,7 @@
-<p>movie-details works!</p>
+<div *ngIf="movie !== undefined">
+    <h1>{{ movie.name }}</h1>
+</div>
+
+<div *ngIf="movie === undefined">
+    <p>not found</p>
+</div>

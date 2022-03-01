@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { IMovie } from '../models/IMovie';
 
@@ -21,4 +21,8 @@ movies$ = this.movies.asObservable();
       this.movies.next(dataFromApi);
     });
   }
+
+getMovieId(id: string | null): Observable<IMovie> {
+  return this.http.get<IMovie>(environment.apiUrl + '/products/' + id);
+}
 }
