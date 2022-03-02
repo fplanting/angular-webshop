@@ -9,6 +9,7 @@ import { MovieListComponent } from './components/movie-list/movie-list.component
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     MovieListComponent,
     MovieDetailsComponent,
     NotfoundComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
