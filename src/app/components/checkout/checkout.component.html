@@ -1,1 +1,5 @@
-<p>checkout works!</p>
+<div *ngFor="let item of items">
+    <img [src]="item.movie.imageUrl">
+    <h5>Price: {{ item.movie.name }} kr</h5>
+    <h5>Price: {{ item.movie.price }} kr</h5>
+</div>

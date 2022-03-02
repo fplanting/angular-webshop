@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ICheckoutItem } from 'src/app/models/ICheckoutItem';
+import { CheckoutService } from 'src/app/services/checkout.service';
+import { MovieService } from 'src/app/services/movie.service';
 
 @Component({
   selector: 'app-checkout',
@@ -7,8 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: MovieService, private checkoutservice: CheckoutService) { 
+    this.items = checkoutservice.getCart();
+  }
 
+  items: ICheckoutItem[] = [];
+  
   ngOnInit(): void {
   }
 
