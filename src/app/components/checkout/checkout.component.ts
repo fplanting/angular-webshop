@@ -15,8 +15,16 @@ export class CheckoutComponent implements OnInit {
   }
 
   items: ICheckoutItem[] = [];
+  totalPrice: number = 0;
   
   ngOnInit(): void {
+    this.getTotalPrice();
   }
 
+getTotalPrice() {
+  this.totalPrice = 0;
+  for (let i = 0; i <this.items.length; i++) {
+    this.totalPrice += this.items[i].amount * this.items[i].movie.price;
+  }
+}
 }

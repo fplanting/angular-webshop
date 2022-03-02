@@ -33,11 +33,11 @@ export class CheckoutService {
     this.cartSource.next(this.cart);
   }
 
+  // to get access on cart and show in checkout-component
    getCart(): ICheckoutItem[] {
     let cartString: string = localStorage.getItem('movie-cart') || '[]';
     this.cart = JSON.parse(cartString);
    return this.cart;
-    //this.cart = JSON.parse(localStorage.getItem('movie-cart')) || [];
  
 }
   }

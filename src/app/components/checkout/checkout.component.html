@@ -1,5 +1,13 @@
-<div *ngFor="let item of items">
-    <img [src]="item.movie.imageUrl">
-    <h5>Price: {{ item.movie.name }} kr</h5>
-    <h5>Price: {{ item.movie.price }} kr</h5>
-</div>
+<body>
+    <article>
+        <h2>Your cart</h2>
+        <div *ngFor="let item of items">
+            <img [src]="item.movie.imageUrl">
+            <h3>{{ item.movie.name }} </h3>
+            <h4>Price: {{ item.movie.price }} kr</h4>
+        </div>
+        <h5 *ngIf="totalPrice">Total Price: {{ totalPrice }} Kr</h5>
+        <button>Order this</button>
+    </article>
+
+</body>
