@@ -10,6 +10,7 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AdminComponent } from './components/admin/admin.component';
     MovieDetailsComponent,
     NotfoundComponent,
     CheckoutComponent,
-    AdminComponent
+    AdminComponent,
+    OrderConfirmationComponent
   ],
   imports: [
     BrowserModule,

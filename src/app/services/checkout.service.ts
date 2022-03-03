@@ -31,6 +31,7 @@ export class CheckoutService {
     this.cart.length = 0;
     localStorage.setItem('movie-cart', JSON.stringify(this.cart));
     this.cartSource.next(this.cart);
+    return this.cart;
   }
 
   // to get access on cart and show in checkout-component

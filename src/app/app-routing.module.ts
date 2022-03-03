@@ -6,6 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
+import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
 
 const routes: Routes = [
 
@@ -14,6 +15,7 @@ const routes: Routes = [
 { path: 'movies', component: MovieListComponent },
 { path: 'movie/:id', component: MovieDetailsComponent },
 { path: 'checkout', component: CheckoutComponent },
+{ path: 'confirmation', component: OrderConfirmationComponent},
 { path: '**', component: NotfoundComponent}
 
 ];
