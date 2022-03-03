@@ -7,7 +7,7 @@
             <h4>Price: {{ item.movie.price }} kr</h4>
         </div>
         <h5 *ngIf="totalPrice">Total Price: {{ totalPrice }} Kr</h5>
-        <button>Order this</button>
+        <button (click)="orderDone()">Order this</button>
     </article>
 
 </body>
