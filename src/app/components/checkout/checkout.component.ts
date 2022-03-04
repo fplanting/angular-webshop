@@ -75,4 +75,9 @@ getTotalPrice() {
     this.totalPrice += this.items[i].amount * this.items[i].movie.price;
   }
 }
+
+eraseMovie(movie: any) {
+  this.checkoutservice.removeMovie(movie);
+  this.getTotalPrice();
+}
 }

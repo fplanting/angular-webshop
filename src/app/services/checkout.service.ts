@@ -26,6 +26,18 @@ export class CheckoutService {
     this.cartSource.next(this.cart);
   }
 
+  // to remove a movie in cart
+  removeMovie(movie: IMovie) {
+    for (let i = 0; i < this.cart.length; i++) {
+      if (movie.id === this.cart[i].movie.id) {
+        this.cart[i].amount--;
+      }
+      if (this.cart[i].amount < 1) {
+        this.cart.splice(i, 1);
+      }
+    }
+  }
+
   // to remove cart on checkout
   removeCart() {
     this.cart.length = 0;

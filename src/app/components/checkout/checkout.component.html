@@ -23,6 +23,7 @@
         <h3>Your cart</h3>
         <div *ngFor="let item of items">
             <img [src]="item.movie.imageUrl">
+            <button (click)="eraseMovie(item.movie)">Remove</button>
             <h3>{{ item.movie.name }} </h3>
             <h4>Price: {{ item.movie.price }} kr</h4>
         </div>
