@@ -6,6 +6,7 @@ import { IOrderRow } from 'src/app/models/IOrderRow';
 import { CheckoutService } from 'src/app/services/checkout.service';
 import { MovieService } from 'src/app/services/movie.service';
 import { OrderService } from 'src/app/services/order.service';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-checkout',
@@ -18,14 +19,23 @@ export class CheckoutComponent implements OnInit {
   constructor(private service: MovieService, 
     private checkoutservice: CheckoutService, 
     private orderservice: OrderService, 
-    private router: Router) { 
+    private router: Router, 
+    private fb: FormBuilder) { 
       
     this.items = checkoutservice.getCart();
   }
 
   items: ICheckoutItem[] = [];
   totalPrice: number = 0;
+  paymentMethods = ['paypal'];
   orderRows: IOrderRow[] = [];
+
+  userForm = this.fb.group({
+    firstName: ['', Validators.required],
+    lastName: ['', Validators.required],
+    email: ['', Validators.email],
+    payment: ['']
+  });
   
   ngOnInit(): void {
     this.getTotalPrice();
@@ -42,6 +52,8 @@ const newOrder: IOrder = {
   id: 0,
   companyId: 37,
   created: new Date().toDateString(),
+  createdBy: this.userForm.get('email')?.value,
+  paymentMethod: this.userForm.get('payment')?.value,
   totalPrice: this.totalPrice,
   status: 0,
   orderRows: this.orderRows

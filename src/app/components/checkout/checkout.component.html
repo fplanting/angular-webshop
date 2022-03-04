@@ -1,13 +1,38 @@
 <body>
     <article>
-        <h2>Your cart</h2>
+        <h2>Checkout</h2>
+        <form [formGroup]="userForm" (ngSubmit)="orderDone()">
+            <h3>Details</h3>
+            <label for="firstname">First name:</label>
+            <input type="text" formControlName="firstName" placeholder="First name"><br /><br />
+
+            <label for="lastname">Last name:</label>
+            <input type="text" formControlName="lastName" placeholder="Last name"><br /><br />
+
+            <label for="email">Email:</label>
+            <input type="email" formControlName="email" placeholder="Email"><br /><br />
+
+            <label for="payment">Payment Method:</label>
+            <select formControlName="payment">
+                <option [value]="method" *ngFor="let method of paymentMethods">{{method}}</option>
+            </select>
+
+            <button type="submit" [disabled]="!userForm.valid">Order this</button>
+        </form>
+
+        <h3>Your cart</h3>
         <div *ngFor="let item of items">
             <img [src]="item.movie.imageUrl">
             <h3>{{ item.movie.name }} </h3>
             <h4>Price: {{ item.movie.price }} kr</h4>
         </div>
         <h5 *ngIf="totalPrice">Total Price: {{ totalPrice }} Kr</h5>
-        <button (click)="orderDone()">Order this</button>
+
+        <br /><br />
+        <h3 *ngIf="totalPrice">Deliver to: {{userForm.value.email}}</h3>
+        <br />
+        <h3 *ngIf="totalPrice">Payment method: {{userForm.value.payment}}</h3>
+
     </article>
 
 </body>
