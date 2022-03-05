@@ -1,10 +1,22 @@
 <header>
-    <img src="assets/img/logo.jpg">
+    <img class="logo" src="assets/img/logo.jpg">
 </header>
 <nav>
     <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
     <a routerLink="/movies" routerLinkActive="active">Movies</a>
     <a routerLink="/checkout" routerLinkActive="active">Checkout</a>
     <a routerLink="/admin" routerLinkActive="active">Admin</a>
-    <a routerLink="/search" routerLinkActive="active">Search</a>
+
+    <input type="search" (keyup)="getSearchResult()" [(ngModel)]="searchValue" [ngModelOptions]="{standalone: true}"
+        type="search" placeholder="search on movies">
+
+    <button type="submit">Search</button>
+    <div *ngIf="showSearchResult" (clickOutside)="hide()">
+    </div>
+
+    <li *ngFor="let result of moviesFromSearch">
+        <a (click)="hide()" [routerLink]="['/movie', result.id]" routerLinkActive="active"><img class="searchImg"
+                src="{{result.imageUrl}}"></a>
+
+    </li>
 </nav>

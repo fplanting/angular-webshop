@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { IMovie } from 'src/app/models/IMovie';
+import { MovieService } from 'src/app/services/movie.service';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +10,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: MovieService) { }
+
+  moviesFromSearch: IMovie[] = [];
+  searchValue: any;
+  showSearchResult: any;
+
+  hide() {
+    this.showSearchResult = false;
+  }
+
+  getSearchResult() {
+    this.showSearchResult = true;
+    if (this.searchValue.length > 1) {
+      this.service.getSearch(this.searchValue).subscribe(data => {
+        this.moviesFromSearch = data;
+      });
+    } else {
+      this.moviesFromSearch = [];
+      this.showSearchResult = false;
+    }
+    }
+
 
   ngOnInit(): void {
   }

@@ -26,7 +26,7 @@ getMovieId(id: string | null): Observable<IMovie> {
   return this.http.get<IMovie>(environment.apiUrl + '/products/' + id);
 }
 
-getSearch(search: string): Observable<IMovie[]> {
-  return this.http.get<IMovie[]>(environment.apiUrl + '/search' + '?searchText=' + search);
+getSearch(value: any): Observable<IMovie[]> {
+  return this.http.get<IMovie[]>(environment.apiUrl + '/search?searchText=' + value);
 }
 }

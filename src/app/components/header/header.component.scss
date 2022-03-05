@@ -10,7 +10,7 @@ nav {
   padding-top: 5px;
 }
 
-img {
+.logo {
   width: 250px;
   height: 70px;
   padding: 10px;
@@ -29,4 +29,24 @@ a {
 h1 {
   font-size: 1rem;
   color: #fff;
+}
+
+input {
+  margin-left: 30px;
+}
+
+.searchImg {
+  width: 100px;
+  height: 150px;
+  margin-left: 770px;
+  margin-bottom: -6px;
+  padding-bottom: 20px;
+  padding-top: 50px;
+  padding-left: 35px;
+  padding-right: 35px;
+  background-color: rgba(161, 161, 161, 0.644);
+}
+
+li {
+  list-style-type: none;
 }
