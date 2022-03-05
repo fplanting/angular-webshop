@@ -1,0 +1,32 @@
+header {
+  background-color: black;
+  height: 90px;
+  margin-bottom: 0px;
+}
+
+nav {
+  background-color: #da9605;
+  height: 40px;
+  padding-top: 5px;
+}
+
+img {
+  width: 250px;
+  height: 70px;
+  padding: 10px;
+}
+
+a {
+  padding-left: 150px;
+  color: #fff;
+  font-size: 1.5rem;
+
+  &.active {
+    color: #a76a0e;
+  }
+}
+
+h1 {
+  font-size: 1rem;
+  color: #fff;
+}

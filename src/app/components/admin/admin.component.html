@@ -1,4 +1,4 @@
-<div *ngFor="let order of orders">
+<div *ngFor="let order of orders.reverse()">
     <h2>{{ order.id }}</h2>
     <h3>{{ order.created }}</h3>
     <h3>{{ order.createdBy }}</h3>

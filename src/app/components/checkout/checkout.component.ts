@@ -51,7 +51,7 @@ export class CheckoutComponent implements OnInit {
 const newOrder: IOrder = {
   id: 0,
   companyId: 37,
-  created: new Date().toDateString(),
+  created: new Date().toISOString(),
   createdBy: this.userForm.get('email')?.value,
   paymentMethod: this.userForm.get('payment')?.value,
   totalPrice: this.totalPrice,

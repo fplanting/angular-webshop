@@ -12,6 +12,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SearchComponent } from './components/search/search.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NotfoundComponent,
     CheckoutComponent,
     AdminComponent,
-    OrderConfirmationComponent
+    OrderConfirmationComponent,
+    SearchComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
