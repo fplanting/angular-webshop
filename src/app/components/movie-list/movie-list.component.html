@@ -1,11 +1,15 @@
 <body>
     <article>
         <h2>Movies</h2>
-        <div *ngFor="let m of movies">
-            <a routerLink="/movie/{{m.id}}">
-                <img [src]="m.imageUrl">
-                <h3>{{ m.name }}</h3>
-            </a>
+        <div class="wrapper">
+            <div class="movies" *ngFor="let m of movies">
+                <a routerLink="/movie/{{m.id}}">
+                    <h3>{{ m.name }}</h3>
+                    <img [src]="m.imageUrl">
+                </a>
+                <h4>Price: {{ m.price }} kr</h4>
+
+            </div>
         </div>
     </article>
 </body>

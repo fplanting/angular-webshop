@@ -14,18 +14,47 @@ h2 {
   background-color: #ecbc53;
 }
 
-div {
-  width: 500px;
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.movies {
+  width: 25%;
+  box-sizing: border-box;
   margin-left: 50px;
   margin-top: 20px;
 }
 
 h3 {
   font-size: 1rem;
+  background-color: #ecbc53;
+  padding: 5px 10px 5px 10px;
+  font-size: 0.8rem;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  a:hover {
+    cursor: pointer;
+  }
+}
+
+h4 {
+  margin-left: 10px;
+  color: #858383;
+  font-size: 0.7rem;
+  font-family: "Courier New", Courier, monospace;
 }
 
 img {
-  width: 100px;
-  height: 150px;
+  width: 180px;
+  height: 270px;
   margin: 5px;
 }
