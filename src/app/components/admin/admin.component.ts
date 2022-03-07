@@ -18,10 +18,10 @@ export class AdminComponent implements OnInit {
     });
   }
 
-  removeOrder(order: any) {
-    this.orderservice.deleteOrder(order.id).subscribe();
+  removeOrder(id: number) {
+    this.orderservice.deleteOrder(id).subscribe();
     for (let i = 0; i < this.orders.length; i++) {
-      if (order.id === this.orders[i].id) {
+      if (id === this.orders[i].id) {
         this.orders.splice(i, 1);
       }
     }

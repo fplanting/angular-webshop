@@ -13,6 +13,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
+import { DisplayMovieComponent } from './components/display-movie/display-movie.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HeaderComponent } from './components/header/header.component';
     CheckoutComponent,
     AdminComponent,
     OrderConfirmationComponent,
-    HeaderComponent
+    HeaderComponent,
+    DisplayMovieComponent
   ],
   imports: [
     BrowserModule,

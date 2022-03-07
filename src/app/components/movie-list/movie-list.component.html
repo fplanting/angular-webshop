@@ -2,14 +2,8 @@
     <article>
         <h2>Movies</h2>
         <div class="wrapper">
-            <div class="movies" *ngFor="let m of movies">
-                <a routerLink="/movie/{{m.id}}">
-                    <h3>{{ m.name }}</h3>
-                    <img [src]="m.imageUrl">
-                </a>
-                <h4>Price: {{ m.price }} kr</h4>
+            <app-display-movie class="movies" *ngFor="let movie of movies" [movie]="movie"></app-display-movie>
 
-            </div>
         </div>
     </article>
 </body>

@@ -7,7 +7,7 @@
             <h3>{{ order.createdBy }}</h3>
             <h3>{{ order.paymentMethod }}</h3>
             <h4>{{ order.totalPrice }}</h4>
-            <button (click)="removeOrder(order)">Delete</button>
+            <button (click)="removeOrder(order.id)">Delete</button>
         </div>
     </article>
 </body>

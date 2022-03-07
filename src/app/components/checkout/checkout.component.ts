@@ -7,6 +7,7 @@ import { CheckoutService } from 'src/app/services/checkout.service';
 import { MovieService } from 'src/app/services/movie.service';
 import { OrderService } from 'src/app/services/order.service';
 import { FormBuilder, Validators } from '@angular/forms';
+import { IMovie } from 'src/app/models/IMovie';
 
 @Component({
   selector: 'app-checkout',
@@ -22,19 +23,18 @@ export class CheckoutComponent implements OnInit {
     private router: Router, 
     private fb: FormBuilder) { 
       
-    this.items = checkoutservice.getCart();
   }
 
-  items: ICheckoutItem[] = [];
+  items: ICheckoutItem[] = this.checkoutservice.getCart();
   totalPrice: number = 0;
-  paymentMethods = ['paypal'];
+  paymentMethods = ['paypal', 'Mastercard', 'VISA'];
   orderRows: IOrderRow[] = [];
 
   userForm = this.fb.group({
     firstName: ['', Validators.required],
     lastName: ['', Validators.required],
-    email: ['', Validators.email],
-    payment: ['']
+    email: ['', [Validators.email, Validators.required]],
+    payment: ['', Validators.required]
   });
   
   ngOnInit(): void {
@@ -76,7 +76,7 @@ getTotalPrice() {
   }
 }
 
-eraseMovie(movie: any) {
+eraseMovie(movie: IMovie) {
   this.checkoutservice.removeMovie(movie);
   this.getTotalPrice();
 }

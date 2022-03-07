@@ -13,24 +13,21 @@ export class HeaderComponent implements OnInit {
   constructor(private service: MovieService) { }
 
   moviesFromSearch: IMovie[] = [];
-  searchValue: any;
-  showSearchResult: any;
+  searchValue: string = "";
 
   hide() {
-    this.showSearchResult = false;
+    this.searchValue = "";
+    this.getSearchResult();
   }
 
   getSearchResult() {
-    this.showSearchResult = true;
+    this.moviesFromSearch = [];
     if (this.searchValue.length > 1) {
       this.service.getSearch(this.searchValue).subscribe(data => {
         this.moviesFromSearch = data;
       });
-    } else {
-      this.moviesFromSearch = [];
-      this.showSearchResult = false;
     }
-    }
+  }
 
 
   ngOnInit(): void {

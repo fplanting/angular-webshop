@@ -7,12 +7,10 @@
     <a routerLink="/checkout" routerLinkActive="active">Checkout</a>
     <a routerLink="/admin" routerLinkActive="active">Admin</a>
 
-    <input type="search" (keyup)="getSearchResult()" [(ngModel)]="searchValue" [ngModelOptions]="{standalone: true}"
+    <input type="search" (input)="getSearchResult()" [(ngModel)]="searchValue" [ngModelOptions]="{standalone: true}"
         type="search" placeholder="search on movies">
 
     <button type="submit">Search</button>
-    <div *ngIf="showSearchResult" (clickOutside)="hide()">
-    </div>
 
     <li *ngFor="let result of moviesFromSearch">
         <a (click)="hide()" [routerLink]="['/movie', result.id]" routerLinkActive="active"><img class="searchImg"
