@@ -1,8 +1,13 @@
-<div *ngFor="let order of orders.reverse()">
-    <h2>{{ order.id }}</h2>
-    <h3>{{ order.created }}</h3>
-    <h3>{{ order.createdBy }}</h3>
-    <h3>{{ order.paymentMethod }}</h3>
-    <h4>{{ order.totalPrice }}</h4>
-    <button (click)="removeOrder(order)">Delete</button>
-</div>
+<body>
+    <article>
+        <h2>Orders</h2>
+        <div *ngFor="let order of orders.reverse()">
+            <h2>{{ order.id }}</h2>
+            <h3>{{ order.created }}</h3>
+            <h3>{{ order.createdBy }}</h3>
+            <h3>{{ order.paymentMethod }}</h3>
+            <h4>{{ order.totalPrice }}</h4>
+            <button (click)="removeOrder(order)">Delete</button>
+        </div>
+    </article>
+</body>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IMovie } from 'src/app/models/IMovie';
+import { MovieService } from 'src/app/services/movie.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  movies: IMovie[] = [];
+  
+  constructor(private service: MovieService) { }
 
   ngOnInit(): void {
+
+    this.service.movies$.subscribe((dataFromService: IMovie[]) => {
+      this.movies = dataFromService;
+    });
+    this.service.getMovies();
   }
 
 }

@@ -1,1 +1,11 @@
-<p>home works!</p>
+<body>
+    <article>
+        <h2>Välkommen hit!</h2>
+        <div *ngFor="let m of movies | slice:1:6">
+            <a routerLink="/movie/{{m.id}}">
+                <img [src]="m.imageUrl">
+                <h3>{{ m.name }}</h3>
+            </a>
+        </div>
+    </article>
+</body>
