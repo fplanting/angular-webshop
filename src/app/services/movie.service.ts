@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { ICategory } from '../models/ICategory';
 import { IMovie } from '../models/IMovie';
 
 @Injectable({
@@ -28,5 +29,9 @@ getMovieId(id: string | null): Observable<IMovie> {
 
 getSearch(value: any): Observable<IMovie[]> {
   return this.http.get<IMovie[]>(environment.apiUrl + '/search?searchText=' + value);
+}
+
+getCategory(): Observable<any[]> {
+  return this.http.get<ICategory[]>(environment.apiUrl + '/categories');
 }
 }

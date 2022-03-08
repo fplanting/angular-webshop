@@ -1,5 +1,6 @@
 <a routerLink="/movie/{{movie?.id}}">
     <h3>{{ movie?.name }}</h3>
     <img [src]="movie?.imageUrl">
+    <div *ngFor="let category of movie?.productCategory">{{ category.category }}</div>
 </a>
 <h4>Price: {{ movie?.price }} kr</h4>

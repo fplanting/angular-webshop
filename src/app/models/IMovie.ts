@@ -1,3 +1,5 @@
+import { ICategory } from "./ICategory";
+
 export interface IMovie {
     id: number;
     name: string;
@@ -5,4 +7,5 @@ export interface IMovie {
     price: number;
     imageUrl: string;
     year: number;
+    productCategory: any[];
 }
