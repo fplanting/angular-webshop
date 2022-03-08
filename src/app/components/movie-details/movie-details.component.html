@@ -3,8 +3,9 @@
         <div *ngIf="movie !== undefined">
             <h2>{{ movie.name }}</h2>
             <img [src]="movie.imageUrl">
-            <h3>Made: {{ movie.year }}</h3>
-            <h4>{{ movie.description }}</h4>
+            <h3>About the movie</h3>
+            <h4>Made: {{ movie.year }}</h4>
+            <p>{{ movie.description }}</p>
             <h5>Price: {{ movie.price }} kr</h5>
         </div>
 
@@ -12,7 +13,7 @@
             <p>not found</p>
         </div>
 
-        <button (click)="addToCheckout(movie)">Buy this</button>
-        <button><a routerLink="/movies" routerLinkActive="active">Get back to Movies</a></button>
+        <button class="btnCheckout" (click)="addToCheckout(movie)">Buy this</button><br />
+        <a routerLink="/movies" routerLinkActive="active">Get back to Movies</a>
     </article>
 </body>

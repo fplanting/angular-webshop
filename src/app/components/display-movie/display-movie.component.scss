@@ -1,11 +1,12 @@
-h3 {
+h2 {
   font-size: 1rem;
-  background-color: #ecbc53;
-  padding: 5px 10px 5px 10px;
+  border-bottom: #d38c2f solid 1px;
+  border-top: #d38c2f solid 1px;
+  padding: 5px 10px 5px 0px;
   font-size: 0.8rem;
   font-family: "Rubik", sans-serif;
 
-  h3:hover {
+  h2:hover {
     background-color: #dddcdc;
   }
 }
@@ -15,16 +16,21 @@ a {
   color: #000000;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-  &:hover h3 {
+  &:hover h2 {
     background-color: #dddcdc;
   }
 }
 
-h4 {
-  margin-left: 10px;
+h3 {
   color: #858383;
-  font-size: 0.7rem;
-  font-family: "Rubik", sans-serif;
+  font-size: 0.6rem;
+  font-family: "Karla", sans-serif;
+}
+
+h4 {
+  color: #c07f07;
+  font-size: 0.6rem;
+  font-family: "Karla", sans-serif;
 }
 
 img {

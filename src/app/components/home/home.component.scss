@@ -10,6 +10,11 @@ article {
   width: 900px;
 }
 
+.link {
+  text-decoration: underline #d38c2f;
+  color: #000;
+}
+
 p {
   margin-left: 150px;
   font-family: "Rubik", sans-serif;
@@ -25,7 +30,7 @@ h2 {
 
 h3 {
   font-size: 0.6rem;
-  font-family: "Rubik", sans-serif;
+  font-family: "Karla", sans-serif;
   color: #3a3939;
 }
 
@@ -50,7 +55,8 @@ img {
   width: 800px;
   margin-left: 50px;
   margin-top: 20px;
-  background-color: #919191;
+  border-bottom: 1px solid #d38c2f;
+  border-top: 1px solid #d38c2f;
 }
 
 .movies {

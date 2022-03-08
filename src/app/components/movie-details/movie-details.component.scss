@@ -23,24 +23,55 @@ h2 {
 }
 
 h3 {
+  font-weight: bold;
+  margin-left: 20%;
+  font-family: "Karla", sans-serif;
   font-size: 1rem;
-  margin-left: 10px;
-  font-family: "Rubik", sans-serif;
+  border-bottom: 1px solid #d38c2f;
+  width: 490px;
+  padding: 5px;
 }
 
 h4 {
+  font-size: 0.8rem;
+  margin-left: 10px;
+  font-family: "Karla", sans-serif;
+  margin-left: 20%;
+}
+
+p {
   margin-left: 10px;
   width: 500px;
   font-family: "Rubik", sans-serif;
+  margin-left: 20%;
 }
 
 h5 {
   margin-left: 10px;
-  font-family: "Rubik", sans-serif;
+  font-family: "Karla", sans-serif;
+  margin-left: 20%;
+  background-color: #db9225;
+  padding: 5px;
+  width: 100px;
+}
+
+.btnCheckout {
+  margin-left: 40%;
+  text-decoration: none;
 }
 
 img {
-  width: 50%;
-  height: 50%;
-  margin-left: 10px;
+  width: 40%;
+  height: 40%;
+  margin-left: 28%;
+}
+
+a {
+  margin-left: 80%;
+  text-decoration: none;
+  font-size: 0.8rem;
+  background-color: #7e7e7e;
+  padding: 10px;
+  color: #fff;
+  font-family: "Karla", sans-serif;
 }
