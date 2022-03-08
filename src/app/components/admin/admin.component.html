@@ -2,12 +2,12 @@
     <article>
         <h2>Orders</h2>
         <div *ngFor="let order of orders.reverse()">
-            <h2>{{ order.id }}</h2>
-            <h3>{{ order.created }}</h3>
-            <h3>{{ order.createdBy }}</h3>
-            <h3>{{ order.paymentMethod }}</h3>
-            <h4>{{ order.totalPrice }}</h4>
-            <button (click)="removeOrder(order.id)">Delete</button>
+            <h3>Order ID: {{ order.id }}</h3>
+            <h4>Created: {{ order.created }}</h4>
+            <h4>Created by: {{ order.createdBy }}</h4>
+            <h4>Payment method: {{ order.paymentMethod }}</h4>
+            <h5>Total price: {{ order.totalPrice }} kr</h5>
+            <button class="btnRemoveOrder" (click)="removeOrder(order.id)">Delete</button>
         </div>
     </article>
 </body>

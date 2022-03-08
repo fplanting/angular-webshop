@@ -1,11 +1,16 @@
 <body>
     <article>
-        <h2>Välkommen hit!</h2>
-        <div *ngFor="let m of movies | slice:1:6">
-            <a routerLink="/movie/{{m.id}}">
-                <img [src]="m.imageUrl">
-                <h3>{{ m.name }}</h3>
-            </a>
+        <h2>Welcome!</h2>
+        <p>Look at some of our movies down under or go to
+            <a routerLink="/movies" routerLinkActive="active">Movies</a> to find more of our collection.
+        </p>
+        <div class="wrapper">
+            <div class="movies" *ngFor="let m of movies | slice:0:6">
+                <a routerLink="/movie/{{m.id}}">
+                    <img [src]="m.imageUrl">
+                    <h3>{{ m.name }}</h3>
+                </a>
+            </div>
         </div>
     </article>
 </body>

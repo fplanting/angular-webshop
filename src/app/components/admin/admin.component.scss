@@ -5,17 +5,42 @@ body {
 article {
   background-color: #dddcdc;
   margin-left: 12%;
+  margin-bottom: 20px;
   padding-bottom: 100px;
   width: 900px;
 }
 
 h2 {
   padding: 10px;
+  padding-left: 20px;
   background-color: #ecbc53;
+  font-family: "Smooch Sans", sans-serif;
+  font-size: 2rem;
+}
+
+h3 {
+  font-family: "Rubik", sans-serif;
+  background-color: #cacaca;
+  padding: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-family: "Rubik", sans-serif;
+  font-size: 0.8rem;
+}
+
+h5 {
+  font-family: "Rubik", sans-serif;
 }
 
 div {
   width: 500px;
-  margin-left: 50px;
+  margin-left: 70px;
   margin-top: 20px;
+}
+
+.btnRemoveOrder {
+  font-family: "Rubik", sans-serif;
 }
