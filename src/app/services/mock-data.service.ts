@@ -74,10 +74,6 @@ movies: IMovie[] = [
   return of(this.movie);
 }
 
-  getSearch(value: any): Observable<IMovie[]> {
-    return of(this.movies);
-}
-
   getCategory(): Observable<any[]> {
     return of(this.categories);
 }
