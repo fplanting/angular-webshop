@@ -15,12 +15,8 @@ movies$ = this.movies.asObservable();
 
   constructor(private http: HttpClient) {}
 
-  getMovies () {
-    this.http.get<IMovie[]>(environment.apiUrl + '/products')
-    .subscribe((dataFromApi) => {
-      console.log(dataFromApi);
-      this.movies.next(dataFromApi);
-    });
+  getMovies(): Observable<IMovie[]> {
+    return this.http.get<IMovie[]>(environment.apiUrl + '/products');
   }
 
 getMovieId(id: string | null): Observable<IMovie> {
