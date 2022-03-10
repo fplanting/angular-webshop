@@ -3,20 +3,23 @@ body {
 }
 
 article {
-  background-color: #dddcdc;
+  background-color: #fffdfd;
   margin-left: 180px;
   margin-bottom: 20px;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
   width: 70%;
 }
 
-h1 {
-  margin-left: 45%;
-  font-size: 3.5rem;
-  color: rgb(223, 9, 9);
-  padding-top: 20px;
+img {
+  width: 500px;
+  height: 450px;
+  margin-left: 20%;
 }
 
-h2 {
-  margin-left: 42%;
+a {
+  font-family: "Karla", sans-serif;
+  font-size: 0.7rem;
+  color: #adabab;
+  margin-left: 33%;
+  text-decoration: none;
 }
