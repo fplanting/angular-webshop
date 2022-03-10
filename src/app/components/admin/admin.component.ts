@@ -10,16 +10,18 @@ import { OrderService } from 'src/app/services/order.service';
 export class AdminComponent implements OnInit {
   orders: IOrder[] = [];
 
-  constructor(private orderservice: OrderService) { }
+  constructor(private orderService: OrderService) { }
 
+  
   ngOnInit(): void {
-    this.orderservice.getOrders().subscribe(data => {
+    this.orderService.getOrders().subscribe(data => {
       this.orders = data;
     });
   }
 
+  // checks the Id and if it matches = deletes it.
   removeOrder(id: number) {
-    this.orderservice.deleteOrder(id).subscribe();
+    this.orderService.deleteOrder(id).subscribe();
     for (let i = 0; i < this.orders.length; i++) {
       if (id === this.orders[i].id) {
         this.orders.splice(i, 1);

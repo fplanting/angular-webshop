@@ -10,11 +10,12 @@ import { MovieService } from 'src/app/services/movie.service';
 export class HomeComponent implements OnInit {
   movies: IMovie[] = [];
   
-  constructor(private service: MovieService) { }
+  constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
 
-    this.service.getMovies().subscribe(movie => {
+    // getting the movies from api from MovieService to be shown in html.
+    this.movieService.getMovies().subscribe(movie => {
       this.movies = movie;
   });
 }

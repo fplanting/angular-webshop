@@ -12,7 +12,7 @@ export class MovieListComponent implements OnInit {
   movies: IMovie[] = [];
   categories: ICategory[] = [];
 
-  constructor(private service: MovieService) { }
+  constructor(private movieService: MovieService) { }
 
   addCategory() {
     for(let movieCount = 0; movieCount < this.movies.length; movieCount++) {
@@ -25,12 +25,14 @@ export class MovieListComponent implements OnInit {
       }
     }
   }
+
+  // subscribes on api from MovieServices to show in html.
   ngOnInit(): void {
-this.service.getMovies().subscribe(movie => {
+this.movieService.getMovies().subscribe(movie => {
   this.movies = movie;
 
 
-this.service.getCategory().subscribe(categories => {
+this.movieService.getCategory().subscribe(categories => {
   this.categories = categories;
   this.addCategory();
 });

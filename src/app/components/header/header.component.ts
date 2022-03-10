@@ -10,7 +10,7 @@ import { MovieService } from 'src/app/services/movie.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private service: MovieService) { }
+  constructor(private movieService: MovieService) { }
 
   moviesFromSearch: IMovie[] = [];
   searchValue: string = "";
@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
   getSearchResult() {
     this.moviesFromSearch = [];
     if (this.searchValue.length > 1) {
-      this.service.getSearch(this.searchValue).subscribe(data => {
+      this.movieService.getSearch(this.searchValue).subscribe(data => {
         this.moviesFromSearch = data;
       });
     }

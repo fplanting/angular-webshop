@@ -15,6 +15,8 @@ movies$ = this.movies.asObservable();
 
   constructor(private http: HttpClient) {}
 
+  // gets api's for movies, id, search and category
+
   getMovies(): Observable<IMovie[]> {
     return this.http.get<IMovie[]>(environment.apiUrl + '/products');
   }

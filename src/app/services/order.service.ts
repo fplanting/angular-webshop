@@ -11,6 +11,8 @@ export class OrderService {
 
   constructor(private http: HttpClient) { }
 
+  // gets api for orders with companyId, to delete a order and post order to a api.
+
   getOrders(): Observable<IOrder[]> {
     return this.http.get<IOrder[]>(environment.apiUrl + '/orders?companyId=37');
   }

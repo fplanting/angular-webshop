@@ -12,7 +12,7 @@ import { MovieService } from 'src/app/services/movie.service';
 export class MovieDetailsComponent implements OnInit {
   movie: IMovie | undefined;
 
-  constructor(private route: ActivatedRoute, private service: MovieService, private checkoutservice: CheckoutService) { }
+  constructor(private route: ActivatedRoute, private movieService: MovieService, private checkoutService: CheckoutService) { }
 
  
 
@@ -20,13 +20,13 @@ export class MovieDetailsComponent implements OnInit {
     this.route.paramMap.subscribe(p => {
       const id = p.get('id');
 
-      this.service.getMovieId(id).subscribe(data => {
+      this.movieService.getMovieId(id).subscribe(data => {
         this.movie = data;
       })
     })
   }
 
   addToCheckout(movie: any) {
-    this.checkoutservice.addMovie(movie);
+    this.checkoutService.addMovie(movie);
   }
 }

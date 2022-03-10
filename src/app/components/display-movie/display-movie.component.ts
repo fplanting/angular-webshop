@@ -7,6 +7,8 @@ import { IMovie } from 'src/app/models/IMovie';
   styleUrls: ['./display-movie.component.scss']
 })
 export class DisplayMovieComponent implements OnInit {
+
+  // input from movie-list, displays movie in html.
   @Input() movie: IMovie | undefined;
 
   constructor() { }
