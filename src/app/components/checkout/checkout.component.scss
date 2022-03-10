@@ -4,56 +4,36 @@ body {
 
 article {
   background-color: #dddcdc;
-  margin-left: 12%;
+  margin-left: 180px;
   margin-bottom: 20px;
   padding-bottom: 100px;
+  width: 70%;
+}
+
+.wrapper {
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.movies {
   width: 900px;
 }
 
-div {
-  width: 900px;
-}
-
-h2 {
+form {
+  margin-left: 190px;
+  margin-top: 40px;
+  background-color: #acaaa9;
   padding: 10px;
-  padding-left: 20px;
-  background-color: #ecbc53;
-  font-family: "Smooch Sans", sans-serif;
-  font-size: 2rem;
+  width: 400px;
 }
 
-h3 {
+.details {
+  font-family: "Rubik", sans-serif;
   font-size: 1rem;
-  margin-left: 10px;
-  font-family: "Rubik", sans-serif;
+  border-bottom: 1px solid #000;
 }
-
-h4 {
-  margin-left: 10px;
-  width: 500px;
-  font-family: "Rubik", sans-serif;
-}
-
-h5 {
-  margin-left: 10px;
-  background-color: #ecbc53;
-  width: 200px;
-  font-family: "Rubik", sans-serif;
-}
-
-h6 {
-  font-family: "Rubik", sans-serif;
-}
-
-img {
-  width: 30%;
-  height: 30%;
-  margin-left: 10px;
-}
-
 label {
   font-family: "Rubik", sans-serif;
-  margin-left: 20px;
   margin-right: 10px;
 }
 
@@ -61,12 +41,123 @@ input {
   font-family: "Rubik", sans-serif;
 }
 
-.btnOrder {
+.checkout {
+  padding: 10px;
+  padding-left: 20px;
+  background-color: #ecbc53;
+  font-family: "Smooch Sans", sans-serif;
+  font-size: 2rem;
+}
+
+.cart {
+  font-size: 1.2rem;
   margin-left: 10px;
   font-family: "Rubik", sans-serif;
+  border-bottom: 2px solid #d38c2f;
+  width: 600px;
+  padding: 5px;
+}
+
+.movies {
+  background-color: #c5c4c4;
+  padding: 5px;
+  width: 600px;
+  margin-left: 10px;
+}
+
+.movieName {
+  width: 200px;
+  font-family: "Rubik", sans-serif;
+  font-size: 0.9rem;
+  margin-left: 10px;
+  border-bottom: 1px solid #777777;
+}
+
+.price {
+  margin-left: 10px;
+  color: #0a0a0a;
+  font-size: 0.8rem;
+  font-family: "Karla", sans-serif;
+  margin-left: 20px;
+}
+
+.totalPrice {
+  background-color: #d89b29;
+  padding: 5px;
+  font-family: "Karla", sans-serif;
+  font-size: 0.8rem;
+  margin-left: 10px;
+  margin-top: 20px;
+  width: 200px;
+}
+
+p {
+  font-family: "Karla", sans-serif;
+  font-size: 0.8rem;
+}
+
+.wrapperP {
+  width: 200px;
+  padding: 5px;
+  margin-left: 200px;
+}
+
+img {
+  width: 10%;
+  height: 10%;
+  margin-left: 20px;
+}
+
+.btnOrder {
+  color: rgb(0, 0, 0);
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  line-height: 1;
+  font-size: 0.8rem;
+  padding: 5px;
+  outline: none;
+  margin-left: 10px;
+  margin-bottom: 20px;
 }
 
 .btnRemove {
-  margin-left: 10px;
+  transition: all 0.5s ease;
+  color: rgb(255, 255, 255);
+  background-color: rgb(105, 105, 105);
+  border: 3px solid rgb(105, 105, 105);
   font-family: "Rubik", sans-serif;
+  text-align: center;
+  line-height: 1;
+  font-size: 0.8rem;
+  padding: 5px;
+  outline: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.btnOrder:hover,
+.btnRemove:hover {
+  color: #001f3f;
+  background-color: #fff;
+}
+
+.btnRemove {
+  margin-left: 20px;
+}
+
+.btnOrder:valid {
+  transition: all 0.5s ease;
+  color: rgb(255, 255, 255);
+  background-color: rgb(105, 105, 105);
+  border: 3px solid rgb(105, 105, 105);
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  line-height: 1;
+  font-size: 0.8rem;
+  padding: 5px;
+  outline: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-bottom: 20px;
 }

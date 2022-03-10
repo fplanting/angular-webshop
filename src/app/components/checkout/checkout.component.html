@@ -1,8 +1,19 @@
 <body>
     <article>
-        <h2>Checkout</h2>
+        <h2 class="checkout">Checkout</h2>
+        <div class="wrapper">
+            <h2 class="cart">Your cart</h2>
+            <div class="movies" *ngFor="let item of items">
+                <h2 class="movieName">{{ item.movie.name }} </h2>
+                <img [src]="item.movie.imageUrl">
+                <h2 class="price">Price: {{ item.movie.price }} kr</h2>
+                <button class="btnRemove" (click)="eraseMovie(item.movie)">Remove</button>
+            </div>
+            <h2 class="totalPrice" *ngIf="totalPrice">Total Price: {{ totalPrice }} Kr</h2>
+        </div>
+
         <form [formGroup]="userForm" (ngSubmit)="orderDone()">
-            <h3>Details</h3>
+            <h2 class="details">Fill in your information</h2>
             <label for="firstname">First name:</label>
             <input type="text" formControlName="firstName" placeholder="First name"><br /><br />
 
@@ -20,19 +31,10 @@
             <button class="btnOrder" type="submit" [disabled]="!userForm.valid">Order this</button>
         </form>
 
-        <h4>Your cart</h4>
-        <div *ngFor="let item of items">
-            <img [src]="item.movie.imageUrl"><br />
-            <button class="btnRemove" (click)="eraseMovie(item.movie)">Remove</button>
-            <h3>{{ item.movie.name }} </h3>
-            <h4>Price: {{ item.movie.price }} kr</h4>
+        <div class="wrapperP">
+            <p *ngIf="totalPrice">Deliver to: {{userForm.value.email}}</p>
+            <p *ngIf="totalPrice">Payment method: {{userForm.value.payment}}</p>
         </div>
-        <h5 *ngIf="totalPrice">Total Price: {{ totalPrice }} Kr</h5>
-
-        <br /><br />
-        <h6 *ngIf="totalPrice">Deliver to: {{userForm.value.email}}</h6>
-        <br />
-        <h6 *ngIf="totalPrice">Payment method: {{userForm.value.payment}}</h6>
 
     </article>
 

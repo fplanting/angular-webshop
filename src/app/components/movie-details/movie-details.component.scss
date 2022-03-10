@@ -4,17 +4,13 @@ body {
 
 article {
   background-color: #dddcdc;
-  margin-left: 12%;
+  margin-left: 180px;
   margin-bottom: 20px;
   padding-bottom: 100px;
-  width: 900px;
+  width: 70%;
 }
 
-div {
-  width: 900px;
-}
-
-h2 {
+.name {
   padding: 10px;
   padding-left: 20px;
   background-color: #ecbc53;
@@ -22,7 +18,7 @@ h2 {
   font-size: 2rem;
 }
 
-h3 {
+.about {
   font-weight: bold;
   margin-left: 20%;
   font-family: "Karla", sans-serif;
@@ -32,7 +28,7 @@ h3 {
   padding: 5px;
 }
 
-h4 {
+.year {
   font-size: 0.8rem;
   margin-left: 10px;
   font-family: "Karla", sans-serif;
@@ -46,18 +42,42 @@ p {
   margin-left: 20%;
 }
 
-h5 {
+.price {
   margin-left: 10px;
   font-family: "Karla", sans-serif;
   margin-left: 20%;
   background-color: #db9225;
   padding: 5px;
   width: 100px;
+  font-size: 0.8rem;
 }
 
-.btnCheckout {
-  margin-left: 40%;
-  text-decoration: none;
+.btnCheckout,
+.btnMovies {
+  transition: all 0.5s ease;
+  color: rgb(255, 255, 255);
+  background-color: rgb(105, 105, 105);
+  border: 3px solid rgb(105, 105, 105);
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  line-height: 1;
+  font-size: 0.8rem;
+  padding: 5px;
+  outline: none;
+  border-radius: 4px;
+  margin-left: 20%;
+  margin-bottom: 20px;
+}
+
+.btnCheckout:hover,
+.btnMovies:hover {
+  color: #001f3f;
+  background-color: #fff;
+}
+
+.btnCheckout:focus {
+  background-color: #dddcdc;
+  border: none;
 }
 
 img {
@@ -66,12 +86,12 @@ img {
   margin-left: 28%;
 }
 
+.btnMovies {
+  margin-left: 50%;
+}
 a {
-  margin-left: 80%;
   text-decoration: none;
   font-size: 0.8rem;
-  background-color: #7e7e7e;
-  padding: 10px;
   color: #fff;
   font-family: "Karla", sans-serif;
 }

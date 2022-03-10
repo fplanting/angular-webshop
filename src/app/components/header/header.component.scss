@@ -16,15 +16,19 @@ nav {
   padding: 10px;
 }
 
+.wrapperLinks {
+  margin-left: 20%;
+}
+
 a {
-  padding-left: 150px;
-  color: #fff;
+  margin-left: 40px;
+  color: #000;
   font-size: 1.7rem;
   font-family: "Smooch Sans", sans-serif;
   text-decoration: none;
 
   &.active {
-    color: #a76a0e;
+    color: #fff;
   }
 }
 
@@ -33,22 +37,68 @@ h1 {
   color: #fff;
 }
 
-input {
-  margin-left: 30px;
+.search {
+  width: 60%;
+  margin-top: -25px;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #666666;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #ffffff;
+}
+
+.searchTerm:focus {
+  color: #666666;
+}
+
+.searchButton {
+  width: 60px;
+  height: 20px;
+  border: none;
+  background: #666666;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.wrap {
+  width: 30%;
+  position: absolute;
+  left: 75%;
+  transform: translate(-50%, -50%);
 }
 
 .searchImg {
   width: 100px;
   height: 150px;
-  margin-left: 770px;
-  margin-bottom: -6px;
-  padding-bottom: 20px;
-  padding-top: 50px;
-  padding-left: 35px;
-  padding-right: 35px;
-  background-color: rgba(161, 161, 161, 0.644);
+}
+
+.searchName {
+  font-size: 0.6rem;
+  font-family: "Karla", sans-serif;
+  color: #3a3939;
+  padding: 10px;
+  margin-left: 10px;
+  border-bottom: 1px solid #c06f06;
+  width: 75%;
 }
 
 li {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-top: -5px;
   list-style-type: none;
+  position: relative;
+  margin-left: 60%;
+  width: 200px;
+  background-color: #cccccc;
 }

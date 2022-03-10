@@ -1,19 +1,19 @@
 <body>
     <article>
         <div *ngIf="movie !== undefined">
-            <h2>{{ movie.name }}</h2>
+            <h2 class="name">{{ movie.name }}</h2>
             <img [src]="movie.imageUrl">
-            <h3>About the movie</h3>
-            <h4>Made: {{ movie.year }}</h4>
+            <h2 class="about">About the movie</h2>
+            <h2 class="year">Made: {{ movie.year }}</h2>
             <p>{{ movie.description }}</p>
-            <h5>Price: {{ movie.price }} kr</h5>
+            <h2 class="price">Price: {{ movie.price }} kr</h2>
         </div>
 
         <div *ngIf="movie === undefined">
             <p>not found</p>
         </div>
 
-        <button class="btnCheckout" (click)="addToCheckout(movie)">Buy this</button><br />
-        <a routerLink="/movies" routerLinkActive="active">Get back to Movies</a>
+        <button class="btnCheckout" (click)="addToCheckout(movie)">Buy this</button>
+        <button class="btnMovies" a routerLink="/movies" routerLinkActive="active">Get back to Movies</button>
     </article>
 </body>
