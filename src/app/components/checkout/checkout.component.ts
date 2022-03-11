@@ -45,7 +45,7 @@ export class CheckoutComponent implements OnInit {
 
 
   // when order is done, it takes id and amount from orderRows interface,
-  // that is included in Iorder and remapping it.
+  // that is included in Iorder and remapping array of Imovie to array of IOrderRow.
   orderDone() {
   for (let i = 0; i < this.items.length; i++) {
     const productId = this.items[i].movie.id;

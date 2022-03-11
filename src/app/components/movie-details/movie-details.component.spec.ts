@@ -11,10 +11,13 @@ describe('MovieDetailsComponent', () => {
   let component: MovieDetailsComponent;
   let fixture: ComponentFixture<MovieDetailsComponent>;
 
+  //adds for ActivatedRoute test.
   let activatedRoute = new ActivatedRouteStub({ id: 76});
 
   beforeEach(async () => {
+    //adds for ActivatedRoute test.
     activatedRoute.setParamMap({ id: 76 });
+    
     TestBed.configureTestingModule({
       declarations: [ MovieDetailsComponent],
       imports: [RouterTestingModule.withRoutes([]), HttpClientModule],

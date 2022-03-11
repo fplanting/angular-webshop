@@ -30,17 +30,11 @@ describe('AppComponent', () => {
     const header = fixture.debugElement.query(By.directive(HeaderComponent));
     expect(header).toBeTruthy();
   });
+  
+  it(`should have as title 'angular-webshop'`, () => {
+  const fixture = TestBed.createComponent(AppComponent);
+  const app = fixture.debugElement.componentInstance;
+  expect(app.title).toEqual('angular-webshop');
+  });
 
-  //it(`should have as title 'angular-webshop'`, () => {
-  //  const fixture = TestBed.createComponent(AppComponent);
-  //  const app = fixture.componentInstance;
-  //  expect(app.title).toEqual('angular-webshop');
-  //});
-
-  //it('should render title', () => {
-  //  const fixture = TestBed.createComponent(AppComponent);
-  //  fixture.detectChanges();
-  //  const compiled = fixture.nativeElement as HTMLElement;
-  //  expect(compiled.querySelector('.content span')?.textContent).toContain('angular-webshop app is running!');
- // });
 });
