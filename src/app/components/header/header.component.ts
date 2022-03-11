@@ -9,7 +9,7 @@ import { MovieService } from 'src/app/services/movie.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  
   constructor(private movieService: MovieService) { }
 
   moviesFromSearch: IMovie[] = [];

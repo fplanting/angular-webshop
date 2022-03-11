@@ -14,16 +14,14 @@ export class MovieListComponent implements OnInit {
 
   constructor(private movieService: MovieService) { }
 
-  // loops through movies (moviecount), pair productId with categoryId.
-  // named the moviecount, productcunt and categorycount to make it easier,
-  // to understand. I know it's better to name with i,j and k.
+  // loops through movies, pair productId with categoryId.
 
   addCategory() {
-    for(let movieCount = 0; movieCount < this.movies.length; movieCount++) {
-      for (let productCount = 0; productCount < this.movies[movieCount].productCategory.length; productCount++) {
-        for (let categoryCount = 0; categoryCount < this.categories.length; categoryCount++) {
-          if(this.movies[movieCount].productCategory[productCount].categoryId === this.categories[categoryCount].id) {
-            this.movies[movieCount].productCategory[productCount].category = this.categories[categoryCount].name + ' ';
+    for(let i = 0; i < this.movies.length; i++) {
+      for (let j = 0; j < this.movies[i].productCategory.length; j++) {
+        for (let k = 0; k < this.categories.length; k++) {
+          if(this.movies[i].productCategory[j].categoryId === this.categories[k].id) {
+            this.movies[i].productCategory[j].category = this.categories[k].name + ' ';
           }
         }
       }

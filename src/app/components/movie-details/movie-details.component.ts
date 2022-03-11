@@ -28,7 +28,7 @@ export class MovieDetailsComponent implements OnInit {
       })
     })
   }
-
+  
   // function uses on a button in html to get the movie 
   //to checkout-cart in checkout-component.
   

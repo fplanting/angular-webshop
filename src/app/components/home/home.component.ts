@@ -10,7 +10,7 @@ import { MovieService } from 'src/app/services/movie.service';
 })
 export class HomeComponent implements OnInit {
   movies: IMovie[] = [];
-  
+
   constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {

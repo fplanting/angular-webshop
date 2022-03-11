@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./order-confirmation.component.scss']
 })
 export class OrderConfirmationComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit(): void {

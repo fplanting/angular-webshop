@@ -17,6 +17,7 @@
             </div>
         </div>
     </div>
+
     <li *ngFor="let result of moviesFromSearch">
         <a (click)="hide()" [routerLink]="['/movie', result.id]" routerLinkActive="active"><img class="searchImg"
                 src="{{result.imageUrl}}">

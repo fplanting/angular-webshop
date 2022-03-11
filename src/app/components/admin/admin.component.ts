@@ -11,7 +11,7 @@ export class AdminComponent implements OnInit {
   orders: IOrder[] = [];
 
   constructor(private orderService: OrderService) { }
-
+  
   
   ngOnInit(): void {
     // gets the posted orders.
