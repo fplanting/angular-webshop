@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IMovie } from 'src/app/models/IMovie';
+import { IMovie } from 'src/app/interfaces/IMovie';
+
 import { MovieService } from 'src/app/services/movie.service';
 
 @Component({

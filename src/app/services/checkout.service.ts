@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { ICheckoutItem } from '../models/ICheckoutItem';
-import { IMovie } from '../models/IMovie';
+import { ICheckoutItem } from '../interfaces/ICheckoutItem';
+import { IMovie } from '../interfaces/IMovie';
+
 
 @Injectable({
   providedIn: 'root'
@@ -15,9 +16,18 @@ export class CheckoutService {
 
   currentCart = this.cartSource.asObservable();
   
-  // adding a movie to localstorage when pressed button on movie-details
+  // adding a movie to localstorage when pressed button on movie-details.
   addMovie(movie: IMovie) {
     let movieFound = false;
+
+    // if the movie already exist, it puts in one more.
+    for(let i = 0; i < this.cart.length; i++) {
+      if(movie.id === this.cart[i].movie.id) {
+        movieFound = true;
+      }
+    }
+
+    // if it doesn't exist, it puts the movie in cart.
 
     if (!movieFound) {
       this.cart.push({ movie, amount: 1 });

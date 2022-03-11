@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IOrder } from 'src/app/models/IOrder';
+import { IOrder } from 'src/app/interfaces/IOrder';
 import { OrderService } from 'src/app/services/order.service';
 
 @Component({
@@ -14,6 +14,7 @@ export class AdminComponent implements OnInit {
 
   
   ngOnInit(): void {
+    // gets the posted orders.
     this.orderService.getOrders().subscribe(data => {
       this.orders = data;
     });

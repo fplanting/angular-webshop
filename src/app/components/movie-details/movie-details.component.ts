@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { IMovie } from 'src/app/models/IMovie';
+import { IMovie } from 'src/app/interfaces/IMovie';
+
 import { CheckoutService } from 'src/app/services/checkout.service';
 import { MovieService } from 'src/app/services/movie.service';
 
@@ -17,6 +18,8 @@ export class MovieDetailsComponent implements OnInit {
  
 
   ngOnInit(): void {
+
+    // subscribes to router param and match it with right id.
     this.route.paramMap.subscribe(p => {
       const id = p.get('id');
 
@@ -26,6 +29,9 @@ export class MovieDetailsComponent implements OnInit {
     })
   }
 
+  // function uses on a button in html to get the movie 
+  //to checkout-cart in checkout-component.
+  
   addToCheckout(movie: any) {
     this.checkoutService.addMovie(movie);
   }

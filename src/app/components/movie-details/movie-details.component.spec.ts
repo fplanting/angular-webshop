@@ -36,6 +36,7 @@ describe('MovieDetailsComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  // test to see if it shows 1 movie.
   it('should show 1 movie', () => {
     console.log(component)
     expect(component.movie?.name).toBe("The Dark Knight");

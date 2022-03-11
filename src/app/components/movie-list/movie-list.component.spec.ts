@@ -28,10 +28,12 @@ describe('MovieListComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  // test to see if it shows 4 movies.
   it('should show 4 movies', () => {
     expect(component.movies.length).toBe(4);
   });
 
+  // test to see if it shows categories.
   it('should show categories', () => {
     for(const movie of component.movies) {
       for(const category of movie.productCategory) {

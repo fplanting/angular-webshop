@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ICheckoutItem } from 'src/app/models/ICheckoutItem';
-import { IOrder } from 'src/app/models/IOrder';
-import { IOrderRow } from 'src/app/models/IOrderRow';
+import { ICheckoutItem } from 'src/app/interfaces/ICheckoutItem';
+import { IOrder } from 'src/app/interfaces/IOrder';
+
 import { CheckoutService } from 'src/app/services/checkout.service';
 import { OrderService } from 'src/app/services/order.service';
 import { FormBuilder, Validators } from '@angular/forms';
-import { IMovie } from 'src/app/models/IMovie';
+import { IMovie } from 'src/app/interfaces/IMovie';
+import { IOrderRow } from 'src/app/interfaces/IOrderRow';
+
+
 
 @Component({
   selector: 'app-checkout',
@@ -41,6 +44,8 @@ export class CheckoutComponent implements OnInit {
   }
 
 
+  // when order is done, it takes id and amount from orderRows interface,
+  // that is included in Iorder and remapping it.
   orderDone() {
   for (let i = 0; i < this.items.length; i++) {
     const productId = this.items[i].movie.id;
@@ -60,6 +65,7 @@ const newOrder: IOrder = {
 };
 
 // checks if order is correct, then removes the cart and navigate to confirmation-router.
+
 if (this.items.length) {
   this.orderService.postOrder(newOrder).subscribe();
   this.items = this.checkoutService.removeCart();

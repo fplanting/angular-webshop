@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { IMovie } from 'src/app/models/IMovie';
+import { IMovie } from 'src/app/interfaces/IMovie';
+
 import { MovieService } from 'src/app/services/movie.service';
 
 @Component({
@@ -15,10 +15,14 @@ export class HeaderComponent implements OnInit {
   moviesFromSearch: IMovie[] = [];
   searchValue: string = "";
 
+  // to hide the search result when clicked on movie.
   hide() {
     this.searchValue = "";
     this.getSearchResult();
   }
+
+  // on keydown in search-input in html, it shows results of movies,
+  // depending on what your search text(value) is.
 
   getSearchResult() {
     this.moviesFromSearch = [];

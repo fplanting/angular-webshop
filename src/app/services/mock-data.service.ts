@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { IMovie } from '../models/IMovie';
-import { IMovieService } from '../models/IMovieService';
+import { IMovie } from '../interfaces/IMovie';
+import { IMovieService } from '../interfaces/IMovieService';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class MockDataService implements IMovieService {
+
+  // mock-data to use for tests in movie-list-spec and movie-details-spec.
+
 categories = [{"id":5, "name": "Action"}, {"id":6, "name": "Thriller"}, {"id":7, "name": "Comedy"}, {"id":8, "name": "Sci-fi"}];
 
 movie: IMovie = {

@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IMovie } from 'src/app/models/IMovie';
+import { IMovie } from 'src/app/interfaces/IMovie';
+
+
 
 @Component({
   selector: 'app-display-movie',
