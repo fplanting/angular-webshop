@@ -2,7 +2,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MockDataService } from 'src/app/services/mock-data.service';
 import { MovieService } from 'src/app/services/movie.service';
-import { DisplayMovieComponent } from '../display-movie/display-movie.component';
+import { MovieDisplayComponent } from '../movie-display/movie-display.component';
+
 import { MovieListComponent } from './movie-list.component';
 
 describe('MovieListComponent', () => {
@@ -11,7 +12,7 @@ describe('MovieListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MovieListComponent, DisplayMovieComponent ],
+      declarations: [ MovieListComponent, MovieDisplayComponent ],
       imports: [HttpClientModule],
       providers: [{provide: MovieService, useClass: MockDataService}],
     })

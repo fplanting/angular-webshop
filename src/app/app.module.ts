@@ -13,7 +13,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
-import { DisplayMovieComponent } from './components/display-movie/display-movie.component';
+import { MovieDisplayComponent } from './components/movie-display/movie-display.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { DisplayMovieComponent } from './components/display-movie/display-movie.
     AdminComponent,
     OrderConfirmationComponent,
     HeaderComponent,
-    DisplayMovieComponent
+    MovieDisplayComponent
   ],
   imports: [
     BrowserModule,
