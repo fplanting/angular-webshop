@@ -17,18 +17,24 @@ nav {
 }
 
 .wrapperLinks {
-  margin-left: 20%;
+  margin-left: 42%;
 }
 
-a {
+.links {
   margin-left: 40px;
-  color: #000;
+  color: #fff;
   font-size: 1.7rem;
   font-family: "Smooch Sans", sans-serif;
   text-decoration: none;
+  padding-right: 5px;
+  padding-left: 5px;
 
   &.active {
-    color: #fff;
+    color: rgb(75, 74, 74);
+  }
+
+  &:hover {
+    background-color: #000;
   }
 }
 
@@ -45,7 +51,7 @@ h1 {
 
 .searchTerm {
   width: 100%;
-  border: 3px solid #666666;
+  border: 3px solid #000;
   border-right: none;
   padding: 5px;
   height: 20px;
@@ -55,14 +61,14 @@ h1 {
 }
 
 .searchTerm:focus {
-  color: #666666;
+  color: #000;
 }
 
 .searchButton {
   width: 60px;
   height: 20px;
   border: none;
-  background: #666666;
+  background: #000;
   text-align: center;
   color: #fff;
   border-radius: 0 5px 5px 0;
@@ -73,13 +79,14 @@ h1 {
 .wrap {
   width: 30%;
   position: absolute;
-  left: 75%;
+  padding-right: 100px;
   transform: translate(-50%, -50%);
 }
 
 .searchImg {
   width: 100px;
   height: 150px;
+  margin-left: 30px;
 }
 
 .searchName {
@@ -98,7 +105,11 @@ li {
   margin-top: -5px;
   list-style-type: none;
   position: relative;
-  margin-left: 60%;
-  width: 200px;
+  margin-left: 23%;
+  width: 172px;
   background-color: #cccccc;
+}
+
+a {
+  text-decoration: none;
 }
